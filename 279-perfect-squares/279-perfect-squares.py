@@ -14,12 +14,3 @@ class Solution:
                 dp[target] = min(dp[target], 1 + dp[target-square])
                 
         return dp[n]
-    
-    
-            
-        
-        
-        
-        
-        
-        
