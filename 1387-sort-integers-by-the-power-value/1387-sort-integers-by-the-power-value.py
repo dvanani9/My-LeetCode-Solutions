@@ -9,5 +9,5 @@ class Solution:
                 return 1+power(n//2)
             return 1+power(3*n+1)
         
-
+        
         return sorted(range(lo , hi+1) , key = power)[k-1]
