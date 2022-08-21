@@ -3,6 +3,7 @@ class Solution:
         rows, cols = len(board), len(board[0])
         
         @functools.lru_cache(None)
+        
         def valid_start(r, c, d):
             if d == 0:
                 # horizontally right
@@ -20,6 +21,7 @@ class Solution:
             return board[r][c] in [' ', word[0]] and (prev_r < 0 or prev_r >= rows or prev_c < 0 or prev_c >= cols or board[prev_r][prev_c] == '#')
         
         @functools.lru_cache(None)
+        
         def dfs(r, c, d, i):                        
             if d == 0:
                 # horizontally right
