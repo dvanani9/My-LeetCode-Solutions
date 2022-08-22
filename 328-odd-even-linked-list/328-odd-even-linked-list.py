@@ -17,6 +17,7 @@ class Solution:
             if i > 2 and i%2!=0:
                 oddptr.next = current
                 oddptr = oddptr.next
+                
             elif i>2 and i%2==0:
                 evenptr.next = current
                 evenptr = evenptr.next
@@ -24,11 +25,13 @@ class Solution:
             current = current.next
             i+=1
             
-            
         evenptr.next = None
         oddptr.next = evenhead
         
         return head
+    
+    
+    
     
         
         
