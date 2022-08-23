@@ -15,3 +15,4 @@ class Solution:
         nxt = int(''.join(digits))
         
         return nxt if nxt < 2**31 else -1
+    
