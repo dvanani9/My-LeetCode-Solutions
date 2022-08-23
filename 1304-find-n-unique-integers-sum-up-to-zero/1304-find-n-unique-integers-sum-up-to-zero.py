@@ -8,3 +8,6 @@ class Solution:
         if n % 2 != 0:
             lst.append(0)
         return lst
+    
+    
+    
