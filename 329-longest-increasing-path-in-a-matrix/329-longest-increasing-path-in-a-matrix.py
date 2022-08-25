@@ -17,19 +17,22 @@ class Solution:
             
             res = 1
             
-            res = max(res, 1+ dfs(r+1, c, matrix[r][c]))
-            res = max(res, 1+ dfs(r-1, c, matrix[r][c]))
-            res = max(res, 1+ dfs(r, c+1, matrix[r][c]))
-            res = max(res, 1+ dfs(r, c-1, matrix[r][c]))
+            res = max(res, 1 + dfs(r+1, c, matrix[r][c]))
+            res = max(res, 1 + dfs(r-1, c, matrix[r][c]))
+            res = max(res, 1 + dfs(r, c+1, matrix[r][c]))
+            res = max(res, 1 + dfs(r, c-1, matrix[r][c]))
             
             dp[(r,c)] = res
             return res
         
         for r in range(rows):
             for c in range(cols):
-                dfs(r,c, -1)
+                dfs(r,c, - 1)
                 
         return max(dp.values())
+    
+    
+    
             
             
             
