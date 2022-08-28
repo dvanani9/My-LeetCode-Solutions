@@ -1,7 +1,7 @@
 class Solution:
+    
     # Bottom Up DP
     def minimumDeletions(self, s: str) -> int:
-
     # b_count[i] represents the number of b's before i
         b_count, counter = [], 0
         for c in s:
@@ -18,6 +18,10 @@ class Solution:
                 dp[i] = dp[i-1] # see point 2
 
         return dp[len(s)-1]
-        
-        
+    
+    
+    
+    
+    
+    
         
