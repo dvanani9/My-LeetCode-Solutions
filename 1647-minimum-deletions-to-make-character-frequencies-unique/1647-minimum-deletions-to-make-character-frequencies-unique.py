@@ -16,4 +16,7 @@ class Solution:
                 hashmap[i]-=1
                 count+=1
             arr.append(hashmap[i])
+            
         return count
+    
+    
