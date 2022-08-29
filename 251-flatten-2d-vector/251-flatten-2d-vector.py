@@ -11,3 +11,6 @@ class Vector2D:
 
     def hasNext(self) -> bool:
         return self._q
+    
+    
+    
