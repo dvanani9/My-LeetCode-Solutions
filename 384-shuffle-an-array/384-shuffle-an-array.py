@@ -12,3 +12,6 @@ class Solution:
     def shuffle(self) -> List[int]:
         random.shuffle(self.shuffles)
         return self.shuffles
+    
+    
+    
