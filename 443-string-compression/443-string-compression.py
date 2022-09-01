@@ -1,21 +1,21 @@
-class Solution(object):
-    def compress(self, chars):
-        """
-        :type chars: List[str]
-        :rtype: int
-        """
-        length = len(chars)
-        start = 0
-        end = 0
-        for pos, char in enumerate(chars):
-            if (pos + 1) == length or chars[pos] != chars[pos + 1]:
-                chars[end] = char
-                end += 1
-                if pos > start:
-                    repeated_times = pos - start + 1
-                    for num in str(repeated_times):
-                        chars[end] = num
-                        end += 1
-                start = pos + 1
-        chars = chars[:end + 1]
-        return end
+class Solution:
+    def compress(self, chars: List[str]) -> int:  
+        i, j = 0, 0
+        count = 1
+        length = 0
+        while i<len(chars):
+            if i<len(chars)-1 and chars[i] == chars[i+1]:
+                count += 1
+            else:
+                chars[j] = chars[i]
+                j += 1
+                length += 1
+                if count>1:
+                    for chr in str(count):
+                        chars[j] = chr
+                        j += 1
+                        length += 1
+                count = 1     
+            i += 1      
+            
+        return length
