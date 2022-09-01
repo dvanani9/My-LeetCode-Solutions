@@ -28,14 +28,3 @@ class Solution:
                 res.append(l)
                 
         return res
-    
-    
-            
-            
-            
-            
-            
-
-            
-            
-        
