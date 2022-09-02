@@ -7,5 +7,13 @@ class Solution:
             costs[house][1] += min(costs[house-1][0], costs[house-1][2])
             costs[house][2] += min(costs[house-1][1], costs[house-1][0])
             
-            
         return min(costs[-1])
+    
+    
+    
+    
+    
+    
+    
+    
+    
