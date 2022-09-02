@@ -1,5 +1,6 @@
 class Solution:
     def shortestWordDistance(self, wordsDict: List[str], word1: str, word2: str) -> int:
+        
         p1 = p2 = -1
         n = len(wordsDict)
         ans = n
@@ -19,5 +20,9 @@ class Solution:
                 ans = min(ans, abs(p1 - p2))
         
         return ans
+    
+    
+    
+    
     
         
