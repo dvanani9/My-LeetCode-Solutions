@@ -16,3 +16,9 @@ class Solution:
         
         return nxt if nxt < 2**31 else -1
     
+    
+    
+    
+    
+    
+    
