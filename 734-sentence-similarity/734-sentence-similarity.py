@@ -8,6 +8,7 @@ class Solution:
         """
         if len(words1) != len(words2):
             return False
+        
         dic = collections.defaultdict(set)
         for p1, p2 in pairs:
             dic[p1].add(p2)
@@ -17,4 +18,8 @@ class Solution:
             if (w2 not in dic[w1] or w1 not in dic[w2]) and w1 != w2:
                 return False
         return True
+    
+    
+    
+    
         
