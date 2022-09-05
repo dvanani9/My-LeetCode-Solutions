@@ -1,12 +1,19 @@
 class Solution:
     def fixedPoint(self, arr: List[int]) -> int:
-        
-        #Naive solution :
-        
-        #Go through with a for loop
-        for i in range( len ( arr ) ):
-            #Check to see it matches its index
-            if arr[ i ] == i:
-                return i;
-        #If it doesn't, return -1
-        return -1;
+        left, right = 0, len(arr)-1
+        save = -1
+
+        while left <= right:
+            mid = left + (right-left)//2
+
+            if arr[mid]>mid:
+                right = mid-1
+
+            elif arr[mid]<mid:
+                left = mid+1
+
+            else:
+                right = mid-1
+                save = mid 
+
+        return save
