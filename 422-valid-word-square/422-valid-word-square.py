@@ -1,15 +1,17 @@
 class Solution:
     def validWordSquare(self, words: List[str]) -> bool:
-        '''
-        Time: O(n^2) -> In the worst case, all rows and columns must be checked!
-        Space: O(1)
-        '''
-        n = len(words)
-        for i in range(n):
-            row = words[i] 
-            if len(row) > len(words):
-                return False       
-            for j in range(len(row)):
-                if len(words[j]) <= i or words[j][i] != row[j]:
-                    return False
+        
+        for i in range(len(words)):
+            rowWord, colWord = words[i], []
+            for j in range(len(words)):
+                if len(words[j])-1 < i:
+                    break
+                colWord.append(words[j][i])
+            if rowWord != ''.join(colWord):
+                return False
         return True
+    
+    
+    
+    
+    
