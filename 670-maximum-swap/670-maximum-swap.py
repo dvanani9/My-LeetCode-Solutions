@@ -1,12 +1,11 @@
 class Solution:
     def maximumSwap(self, num: int) -> int:
-        currmax = num
-        d = list(str(num))
-        n = len(d)
-        for i in range(n - 1):
-            j = max([(int(d[k]), k) for k in range(i + 1, n)])[1]
-            if int(d[j]) > int(d[i]):
-                d[i], d[j] = d[j], d[i]
-                break
-        currmax = max(currmax, int("".join(d)))
-        return currmax
+        s = str(num)
+        total = []
+        for i in range(len(s)):
+            for j in range(i+1,len(s)):
+                num1 = s[:i] + s[j] + s[i+1:j] + s[i] + s[j+1:]
+                num2 = int(num1)
+                if num2 > num:
+                    num = num2
+        return num
