@@ -14,3 +14,5 @@ class HitCounter:
         while self.hitCounter and self.hitCounter[0][0] <= timestamp - 300:
             self.total -= self.hitCounter.popleft()[1]
         return self.total
+    
+    
