@@ -1,6 +1,4 @@
-class Solution(object):
-    def uniqueOccurrences(self, arr):
-        cnt = Counter(arr)     
-        x = cnt.values()
-        y = set(x)
-        return len(x) == len(y)
+class Solution:
+    def uniqueOccurrences(self, arr: List[int]) -> bool:
+        x = Counter(arr).values()
+        return len(x) == len(set(x))
