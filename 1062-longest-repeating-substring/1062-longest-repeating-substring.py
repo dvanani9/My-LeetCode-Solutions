@@ -9,11 +9,17 @@ class Solution:
             elif len(subs) == 2:
                 return int(subs[0] == subs[-1])
             else:
-                prev = dfs(n+1)                    
+                prev = dfs(n+1)     
+                
                 check_str = subs[:prev+1]
                 rest_str = subs[1:]
+                
                 if check_str in rest_str:
                     prev = prev+1
 
                 return prev
+            
         return  dfs(0)
+    
+    
+    
