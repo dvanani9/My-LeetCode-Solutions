@@ -15,3 +15,6 @@ class Solution:
             A = B
             
         return sum(map(sum,A))
+    
+    
+    
