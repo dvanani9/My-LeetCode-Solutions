@@ -1,15 +1,22 @@
 class Solution:
     def maximumSumScore(self, nums: List[int]) -> int:
-        n = len(nums)
-        forward = [0] * (n+1)
-        back = [0] * (n+1)
-        for i in range(1,1+n):
-            forward[i] = nums[i-1] + forward[i-1]
-        for i in range(n-1, -1, -1):
-            back[i] = nums[i] + back[i+1]
-        print(forward[1:],back[:-1])
+		
+		# Start a lefthand and a righhand sum - left: 0, right: sum of all elements
+        lh, rh = 0, sum(nums)
+        maxSF = float("-inf")
         
-        return max(max(forward[1:]), max(back[:-1]))
+        for i in range(len(nums)):
+            
+			# add to the lefthand sum
+            lh += nums[i]
+			
+			# check if this is the maximum
+            maxSF = max(max(lh,rh),maxSF)
+			
+			# decrement the righthand sum
+            rh -= nums[i]
+        
+        return maxSF
     
     
         
