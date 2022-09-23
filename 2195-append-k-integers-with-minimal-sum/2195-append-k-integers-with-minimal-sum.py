@@ -9,7 +9,7 @@ class Solution:
                 k+=1
         return k*(k+1)//2 - count
     
-    
+
     
         
         
